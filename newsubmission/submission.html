@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Submission</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="flexStyle.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    
+</head>
+
+
+<body>
+  
+  <div id="login">
+      <h3 class="text-center text-white pt-5">Submission form</h3>
+      <div class="container">
+          <div id="login-row" >
+              <div id="login-column" class="col-md-6">
+                  <div id="login-box" class="col-md-12">
+                      <form id="login-form" class="form" action="" method="post">
+                          <h3 class="text-center text-info">Submission</h3>
+                          <div class="form-group">
+                                <select class="text-info">
+                                        <option>Job type</option>
+                                        <option>IT</option>
+                                        <option>Household</option>
+                                        <option>Paper work</option>
+                                    </select>
+                          </div>
+                          <div class="form-group">
+                              <label for="jobname" class="text-info">Jobname:</label><br>
+                              <input type="text" name="jobname" id="jobname" class="form-control">
+                          </div>
+                          <div class="form-group">
+                              <label for="address" class="text-info">Address:</label><br>
+                              <input type="text" name="address" id="address" class="form-control">
+                          </div>
+                          <div class="form-group">
+                                <label for="price" class="text-info">Price: </label><br>
+                                <input type="number" name="price" id="price" class="form-control">
+                            </div>
+                          <div class="form-group">
+                                <label for="shortdescription" class="text-info">Short description:</label><br>
+                                <input type="text" name="shortdescription" id="shortdescription" class="form-control">
+                            </div>
+                          <div class="form-group">
+                                <label for="email" class="text-info">E-mail:</label><br>
+                                <input type="email" class="form-control" id="email" onkeyup="isCorrectEMail();">
+                                <span id="gmail"></span>
+                              </div>
+                                <div class="form-group">
+                                    <label for="shortdescription" class="text-info">Mobile: </label><br>
+                                    <input type="text" name="mobile" id="mobile" class="form-control">
+                                </div>
+                            <div class="form-group">
+                                <label for="fulldescription" class="text-info">Full description:</label><br>
+                                <input type="file" id="fulldescription" name="fulldescription" accept="file_extension/*" capture>
+                            </div>
+                            <div class="form-group">
+                                <label for="addphoto" class="text-info">Add photo:</label><br>
+                                <input type="file" id="addphoto" name="addPhoto" accept="image/*" capture>
+                            </div>
+                          <div class="form-group">
+                              <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
+                              <input type="submit" name="submit" class="btn btn-info btn-md" value="Submit">
+                          </div>
+                          <div id="register-link" class="text-right">
+                              <a href="#" class="text-info">Register here</a>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+<script>
+    var isCorrectEMail = function(){
+  let mail = document.getElementById('email').value;
+  let n = mail.length;
+  if(mail.includes("@gmail.com", n-10)){
+    document.getElementById("gmail").style.color = "green";
+    document.getElementById("gmail").innerHTML = "correct";
+  }
+  else{
+    document.getElementById("gmail").style.color = "red";
+    document.getElementById("gmail").innerHTML = "not correct format";  
+  }
+}
+</script>
+</html>
